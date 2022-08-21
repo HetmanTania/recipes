@@ -1,0 +1,31 @@
+.steps {
+    margin-top: 20px;
+    .title {
+      text-decoration: underline;
+    }
+    .step {
+      line-height: 1.7;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+    }
+    
+      .text {
+        width: 350px;
+        margin-left: 40px;
+  
+        &.done {
+          position: relative;
+          height: 100px;
+          overflow: hidden;
+  
+          div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 55%, rgba(0,212,255,0) 100%);
+            background-repeat: repeat-x;
+          }
+        };
+      }
+    
+}

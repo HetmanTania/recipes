@@ -1,0 +1,35 @@
+@import '@/style/colors.scss';
+.ingredients {
+    table {
+  
+      input {
+        margin: 0 8px;
+      }
+  
+      label  {
+        margin: 0 8px;
+      }
+  
+      tr {
+        line-height: 1.8;
+        td:first-child {
+          vertical-align: middle;
+          border-right: 1px solid $subtext;
+          border-bottom: 1px solid $subtext;
+        }
+        td:last-child {
+          width: 95%;
+          padding-left: 10px;
+          border-bottom: 1px solid $subtext;
+          &.done {
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  
+    .ingredient-title {
+      line-height: 1.6;
+    }
+  }
+  

@@ -1,0 +1,21 @@
+@import '@/style/colors.scss';
+
+.nutritional {
+    background-color: $blue;
+}
+
+.block-nutritional {
+    width: 90px;
+    height: 90px;
+    margin: 10px 15px;
+    background-color: rgba(255,255,255,0.5) ;
+    border-radius: 5px;
+}
+
+.value {
+    width: 80%;
+    font-size: 27px;
+    font-weight: 700;
+    border-bottom: 1px solid $transparentGray;
+    text-align: center;
+}
