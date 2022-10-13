@@ -33,3 +33,8 @@ export function getNumberFromPxl(str) {
 export function toFixed(num, digits) {
   return Number(num.toFixed(digits));
 }
+
+export function getPathImage(path) {
+  console.log(path);
+  return require(`./assets/${path}`);
+}

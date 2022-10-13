@@ -1,12 +1,10 @@
 <template>
   <div class="mealTypes is-flex is-flex-direction-column">
+    {{ mealTypes }}
     <slider>
       <slot>
-        <meal-tile
-          v-for="item in mealTypes"
-          :key="item.id"
-          :meal="item"
-        ></meal-tile>
+        <meal-tile v-for="item in mealTypes" :key="item.id" :meal="item">
+        </meal-tile>
       </slot>
     </slider>
     <random-recipes></random-recipes>

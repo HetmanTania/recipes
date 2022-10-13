@@ -19,7 +19,7 @@
             />
             <label :for="ingredient.id"></label>
           </td>
-          <td :class="[ingredient.isDone ? 'done' : '']">
+          <td class="ingredientName" :class="[ingredient.isDone ? 'done' : '']">
             {{ ingredient.name }}
           </td>
         </tr>
@@ -39,6 +39,14 @@ export default {
   },
   methods: {},
   computed: {},
+  watch: {
+    extendedIngredients(newValue) {
+      const tempIngredients = newValue.map((el) => {
+        return { ...el, isDone: false };
+      });
+      this.ingredients = tempIngredients;
+    },
+  },
 };
 </script>
 

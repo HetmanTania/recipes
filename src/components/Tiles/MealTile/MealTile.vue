@@ -3,15 +3,7 @@
     <router-link :to="{ name: 'search', params: { id: meal.id } }">
       <div class="img-box">
         <div class="bg-green"></div>
-        <div
-          class="img"
-          v-bind:style="{
-            backgroundImage: `url('./assets/mealType/${meal.image}')`,
-          }"
-        ></div>
-        <!-- v-bind:style="{backgroundImage:`url('./assets/mealType/${meal.image}')`,`
-          `··········<div·class="img"·v-bind:style="{backgroundImage:·`url('./assets/mealType/${meal.image}')`}"></div>
-          ␍` with `········<div⏎··········class="img"⏎··········v-bind:style="{⏎············backgroundImage:·`url('./assets/mealType/${meal.image}')`,`  prettier/prettier -->
+        <div class="img" v-bind:style="{ backgroundImage: getUrlImage }"></div>
       </div>
       <h4 class="title is-5">
         {{ meal.title }}
@@ -21,9 +13,16 @@
 </template>
 
 <script>
+import { getPathImage } from "../../../utils";
+
 export default {
   name: "MaelTitle",
   props: ["meal"],
+  computed: {
+    getUrlImage() {
+      return `url(${getPathImage(`mealType/${this.meal.image}`)})`;
+    },
+  },
 };
 </script>
 
