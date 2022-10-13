@@ -1,0 +1,29 @@
+
+.stepDone {
+    width: 100px;
+    height: 110px;
+    background-color: $transparentGray3;
+    border-radius: 5px;
+    .numberStep {
+      width: 100%;
+      height: 70px;
+      font-size: 42px;
+      color:  $transparentGray;
+      text-align: center;
+      border-bottom: 1px solid $transparentGray;
+    }
+  
+    label {
+      margin-left: 12px;
+    }
+  
+    .done {
+      height: 40px;
+    }
+  
+    .checkItemText {
+      margin-left: 25px;
+      margin-top: -5px;
+      text-transform: uppercase;
+    }
+  }

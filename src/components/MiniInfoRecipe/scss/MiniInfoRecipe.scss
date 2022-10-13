@@ -1,0 +1,14 @@
+@import '@/style/colors.scss';
+.miniInfoRecipe {
+    font-size: 1.6rem;
+    padding: 10px;
+    background-color: $light-blue;
+    border-radius: 10px;
+    img {
+      margin-right: 10px;
+    }
+    .level-item:first-child {
+      border-right: 1px solid $subtext;
+    }
+}
+  
