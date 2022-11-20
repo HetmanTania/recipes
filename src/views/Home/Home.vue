@@ -1,15 +1,16 @@
 <template>
-  <div class="mealTypes is-flex is-flex-direction-column">
-    {{ mealTypes }}
-    <slider>
-      <slot>
-        <meal-tile v-for="item in mealTypes" :key="item.id" :meal="item">
-        </meal-tile>
-      </slot>
-    </slider>
-    <random-recipes></random-recipes>
+  <div class="block">
+    <div class="mealTypes is-flex is-flex-direction-column">
+      <slider>
+        <slot>
+          <meal-tile v-for="item in mealTypes" :key="item.id" :meal="item">
+          </meal-tile>
+        </slot>
+      </slider>
+      <random-recipes></random-recipes>
+    </div>
+    <div></div>
   </div>
-  <div></div>
 </template>
 
 <script>
@@ -18,6 +19,7 @@ import mealTypesObj from "../../constants.js";
 import MealTile from "@/components/Tiles/MealTile/MealTile.vue";
 import Slider from "@/components/Slider/Slider.vue";
 import RandomRecipes from "../RandomRecipes/RandomRecipes.vue";
+
 export default {
   data() {
     return {
@@ -36,4 +38,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "./scss/Home.scss";
+</style>

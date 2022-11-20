@@ -1,6 +1,6 @@
 <template>
   <div class="mealTitle itemTile card">
-    <router-link :to="{ name: 'search', params: { id: meal.id } }">
+    <router-link :to="{ name: 'search', params: { query: meal.id } }">
       <div class="img-box">
         <div class="bg-green"></div>
         <div class="img" v-bind:style="{ backgroundImage: getUrlImage }"></div>

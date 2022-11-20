@@ -5,7 +5,7 @@
         <div
           class="img"
           v-bind:style="{
-            backgroundImage: `url('../src/assets/mealType/${titleImg}')`,
+            backgroundImage: getUrlImage,
           }"
         ></div>
         <div class="title">{{ titleSerch }}</div>
@@ -24,7 +24,8 @@
 
 <script>
 import { mapActions, mapState } from "vuex";
-import mealTypes from "../../constants.js";
+import { getPathImage } from "../../utils.js";
+// import mealTypes from "../../constants.js";
 import RecipesList from "../RecipesList/RecipesList.vue";
 
 export default {
@@ -37,15 +38,22 @@ export default {
   },
   async created() {
     try {
-      const id = this.$route.params.id;
-      this.titleSerch = mealTypes.find((el) => el.id === id).title;
-      this.titleImg = mealTypes.find((el) => el.id === id).image;
-      await this.searchByMealTypes(this.titleSerch);
+      const query = this.$route.params.query;
+      console.log("created", query);
+      // this.titleSerch = mealTypes.find((el) => el.id === id).title;
+      // this.titleImg = mealTypes.find((el) => el.id === id).image;
+      await this.searchByQuery(query);
     } catch (err) {
       console.log(err);
     }
   },
+  // beforeUnmount() {
+  //   this.resetStateSearch();
+  // },
   computed: {
+    getUrlImage() {
+      return `url(${getPathImage(`mealType/${this.titleImg}`)})`;
+    },
     ...mapState({
       searhResult: (state) => state.search.searhResult,
       searhCount: (state) => state.search.count,
@@ -54,7 +62,8 @@ export default {
     }),
   },
   methods: {
-    ...mapActions("search", ["searchByMealTypes"]),
+    // ...mapMutations('searh', ['resetStateSearch']),
+    ...mapActions("search", ["searchByMealTypes", "searchByQuery"]),
   },
   components: { RecipesList },
 };

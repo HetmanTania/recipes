@@ -25,7 +25,6 @@ export default {
         const path = urlGenerate(`${id}/similar`, "number=4");
         const items = await axios(path);
         commit("setSimilarRecipes", items.data);
-        console.log("similarRecipe = ", items.data);
       } catch (e) {
         console.log(e);
       }
@@ -35,7 +34,6 @@ export default {
         const path = urlGenerate("random", "number=10");
         const items = await axios(path);
         commit("setRandomRecipes", items.data.recipes);
-        console.log("randomRecipes = ", items.data.recipes);
       } catch (e) {
         console.log(e);
       }
@@ -49,14 +47,6 @@ export default {
       } catch (e) {
         console.log(e);
       }
-    },
-  },
-  getters: {
-    randomRecipes(state) {
-      return state.randomRecipes;
-    },
-    theRecipe(state) {
-      return state.theRecipe;
     },
   },
 };
