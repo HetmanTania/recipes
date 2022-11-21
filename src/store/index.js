@@ -4,7 +4,7 @@ import { createStore } from "vuex";
 import step from "./step.js";
 import recipe from "./recipe.js";
 import search from "./search.js";
-
+import components from "./components.js";
 export default createStore({
   state: {
     nutritionalInfo: undefined,
@@ -35,5 +35,6 @@ export default createStore({
     step,
     recipe,
     search,
+    components,
   },
 });

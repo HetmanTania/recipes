@@ -1,26 +1,42 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="container is-flex is-align-items-baseline">
-      <div class="navbar-brand">
-        <router-link class="navbar-item navbar-item title is-3" to="/"
-          >Recipes</router-link
-        >
+    <div
+      class="container is-flex is-justify-content-space-between is-align-items-center"
+    >
+      <div class="is-flex">
+        <div class="navbar-brand">
+          <router-link class="navbar-item navbar-item title is-3" to="/"
+            >Recipes</router-link
+          >
+        </div>
+        <div class="navbar-brand">
+          <router-link class="navbar-item navbar-item title is-4" to="/"
+            >Home</router-link
+          >
+        </div>
       </div>
       <div class="navbar-brand">
-        <router-link class="navbar-item navbar-item title is-4" to="/"
-          >Home</router-link
-        >
+        <div v-on:click="openSearch" class="navbar-item navbar-item title is-4">
+          <img class="svg" src="@/assets/icon/search.svg" />
+        </div>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "Header",
+  data() {
+    return {
+      searchIsShow: false,
+    };
+  },
   methods: {
-    test() {
-      // console.log("sdsd");
+    ...mapActions("components", ["actionsIsSearchPanelShow"]),
+    openSearch() {
+      this.actionsIsSearchPanelShow(true);
     },
   },
 };

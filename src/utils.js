@@ -35,6 +35,5 @@ export function toFixed(num, digits) {
 }
 
 export function getPathImage(path) {
-  console.log(path);
   return require(`./assets/${path}`);
 }

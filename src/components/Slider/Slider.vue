@@ -44,8 +44,6 @@ export default {
       const sliderItem = this.$refs.sliderItems.children[0];
       const width = sliderItem.getBoundingClientRect().width;
       this.widthSliderItem = width;
-
-      console.log("widthSliderItem", this.widthSliderItem);
       if (innerWidth < this.windowInnerWidth) {
         this.resizeSliderRight();
       } else {
@@ -69,7 +67,6 @@ export default {
           rightPercent - this.widthSliderItem - 6
         }px`;
       }
-      console.log(" sliderItems.style.right", sliderItems.style.right);
     },
     clickRightArrow() {
       const sliderItems = this.$refs.sliderItems;
@@ -85,7 +82,6 @@ export default {
           rightPercent + this.widthSliderItem + 6
         }px`;
       }
-      console.log(" sliderItems.style.right", sliderItems.style.right);
     },
     resizeSlider() {
       const sliderItems = this.$refs.sliderItems;

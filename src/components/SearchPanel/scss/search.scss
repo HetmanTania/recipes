@@ -1,0 +1,53 @@
+@import '@/style/colors.scss';
+
+.dox-search {
+   position: relative;
+   z-index: 30;
+}
+
+.search {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+   
+    .control {
+        padding: 20px;
+        background-color: $white;
+        border-radius: 10px;
+    }
+    input {
+        width: 350px;
+        font-size: 24px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        opacity: 1;
+        z-index: 1;
+
+        &::placeholder {
+            font-size: 24px;
+        }
+    }
+
+    .level-item {
+        width: 100vw;
+        height: 100vh;
+        background-color: $transparentGray2;
+    }
+
+    .button {
+        width: 130px;
+        height: 60px;
+        font-size: 24px;
+        z-index: 20;
+        background: $gray;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        color: $white;
+    }
+}
+
+.svg {
+    
+}
