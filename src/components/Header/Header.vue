@@ -3,17 +3,10 @@
     <div
       class="container is-flex is-justify-content-space-between is-align-items-center"
     >
-      <div class="is-flex">
-        <div class="navbar-brand">
-          <router-link class="navbar-item navbar-item title is-3" to="/"
-            >Recipes</router-link
-          >
-        </div>
-        <div class="navbar-brand">
-          <router-link class="navbar-item navbar-item title is-4" to="/"
-            >Home</router-link
-          >
-        </div>
+      <div class="navbar-brand">
+        <router-link class="navbar-item navbar-item title is-3" to="/"
+          >Recipes</router-link
+        >
       </div>
       <div class="navbar-brand">
         <div v-on:click="openSearch" class="navbar-item navbar-item title is-4">
