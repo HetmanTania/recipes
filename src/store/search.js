@@ -136,7 +136,7 @@ export default {
 
     async searchByQuery({ commit }, query) {
       console.log("searchByQuery", query);
-      const path = urlGenerate("complexSearch", "query=pasta");
+      const path = urlGenerate("complexSearch", `query=${query}`);
       const items = await axios(path);
       console.log(items);
       commit("setSearhResult", items.data.results);
@@ -145,11 +145,12 @@ export default {
       commit("setTotalResults", items.data.totalResults);
     },
 
-    // resetStateSearch({commit}) {
-    //   commit("setSearhResult", []);
-    //   commit("setCount", 0);
-    //   commit("setOffset", 0);
-    //   commit("setTotalResults", 0);
-    // }
+    resetStateSearch({ commit }) {
+      console.log("resetStateSearch");
+      commit("setSearhResult", []);
+      commit("setCount", 0);
+      commit("setOffset", 0);
+      commit("setTotalResults", 0);
+    },
   },
 };

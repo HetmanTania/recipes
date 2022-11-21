@@ -35,6 +35,7 @@ export default {
     },
     startSearch() {
       this.$router.push({ name: "search", params: { query: this.query } });
+      this.closeSerch();
       // this.searchByQuery(this.query);
     },
   },

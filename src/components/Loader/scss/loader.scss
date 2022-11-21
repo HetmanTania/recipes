@@ -1,0 +1,84 @@
+@import '@/style/colors.scss';
+
+
+.title {
+  text-align: center;
+}
+
+.container {
+  width: 350px;
+  height: 350px;
+  position: relative;
+
+  animation: spin 1.5s infinite;
+
+  & div {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  & div:nth-child(1) {
+    width: 75px;
+    height: 75px;
+    top: 100px;
+    left: 100px;
+    background-color: $brightPurple;
+    animation: move1 1.5s infinite;
+  }
+
+  & div:nth-child(2) {
+    width: 45px;
+    height: 45px;
+    top: 105px;
+    right: 105px;
+    background-color: $brightBlue;
+    animation: move2 1.5s infinite;
+  }
+
+  & div:nth-child(3) {
+    width: 75px;
+    height: 75px;
+    bottom: 105px;
+    right: 105px;
+    background-color: $hotPink;
+    animation: move3 1.5s infinite;
+  }
+
+  & div:nth-child(4) {
+    width: 45px;
+    height: 45px;
+    bottom: 105px;
+    left: 110px;
+    background-color: $brightYellow;
+    animation: move4 1.5s infinite;
+  }
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move1 {
+  50% {
+    transform: translate(-30px, -30px) scale(0.3);
+  }
+}
+
+@keyframes move2 {
+  50% {
+    transform: translate(15px, -20px) scale(0.55);
+  }
+}
+@keyframes move3 {
+  50% {
+    transform: translate(30px, 30px) scale(0.3);
+  }
+}
+@keyframes move4 {
+  50% {
+    transform: translate(-15px,20px) scale(0.55);
+  }
+}
