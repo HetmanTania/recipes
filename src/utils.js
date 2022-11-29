@@ -9,7 +9,17 @@ export function urlGenerate(path, query) {
 }
 
 export function transformationDescription(description) {
-  return description.split("<a").splice(0, 1).join();
+  if (description && description.length) {
+    return description.split("<a").splice(0, 1).join();
+  }
+  return "";
+}
+
+export function getMiniDescription(description) {
+  if (description && description.length) {
+    return description.split(".").splice(0, 1).join();
+  }
+  return "";
 }
 
 export function getNumberFromPercent(str) {

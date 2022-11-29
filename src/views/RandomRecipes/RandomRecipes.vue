@@ -21,3 +21,7 @@ export default {
   components: { Tile },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "./scss/RandomRecipes.scss";
+</style>
