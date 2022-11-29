@@ -123,27 +123,19 @@ label {
 }
 
 .itemTile {
-  width: 300px;
-  height: 350px;
-  min-height: 300px;
+  width:  30%;
   margin: 10px;
   border-radius: 20px !important;
-  background-color: $white;
   transition: .4s;
-  a:first-child {
-    display: block;
-    width: 100%;
-    height: 70%;
-    margin-top: 10px;
-  }
-
   h4 {
-    width: 90%;
-    height: auto;
     margin-top: 15px;
-    margin-left: 20px;
+    text-align: center;
     z-index: 1;
     color: $gray;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .bg-green, .img {
     width: 100%;
@@ -152,10 +144,10 @@ label {
   }
 
   .img-box {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
     position: relative;
-    border-radius: 15px;
+    border-radius: 5px;
     overflow: hidden;
 
     &:hover {
@@ -187,14 +179,47 @@ label {
         background-color: $transparentGray2;
         transition: .4s;
 
-        &
-
         .svg {
           opacity: 1;
           transition: .4s;
         }
       }
 
+    }
+  }
+
+  .itemTile-info {
+    width: 100%;
+    .is-4 {
+      font-size: 28px;
+      height: 63px;
+      overflow: hidden;
+    }
+
+    .is-5 {      
+      margin-top: 15px;
+      margin-bottom: 0;
+      color: $secondary-text;
+      font-size: 16px;
+      text-transform:capitalize;
+      text-align: center;
+    }
+    .miniInfoRecipe {
+      width: 100%;
+      font-size: 15px;
+      img {
+        width: 36px;
+      }
+    }
+
+    .desc {
+      max-height: 58px;
+      margin: 15px;
+      font-size: 18px;
+      line-height: 30px;
+      color: $secondary-text;
+      text-align: center;
+      overflow: hidden;
     }
   }
 
@@ -207,12 +232,6 @@ label {
     i {
       margin-right: 5px;
     }
-  }
-
-  
-  &:hover {
-    transition: .4s;
-    transform: translate(0px, -10px);
   }
 }
 
@@ -246,6 +265,8 @@ label {
 }
 
 .features-block {
+  
+  width: 100%;
   div {
     margin-right: 10px;
   }
