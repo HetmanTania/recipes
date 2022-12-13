@@ -17,7 +17,15 @@
           <div class="title is-4">Found recipes: {{ searhTotalResults }}</div>
         </div>
       </div>
-      <recipes-list :recipesList="searhResult"></recipes-list>
+      <div
+        v-if="isList"
+        class="container container-list is-widescreen container-filters-list is-flex"
+      >
+        <filters @onClickSearch="onStartSearch"></filters>
+        <div class="list">
+          <recipes-list :recipesList="searhResult"></recipes-list>
+        </div>
+      </div>
     </div>
   </div>
   <div v-else>
@@ -30,10 +38,12 @@ import { mapActions, mapState } from "vuex";
 import { getPathImage } from "../../utils.js";
 import RecipesList from "../RecipesList/RecipesList.vue";
 import Loader from "../../components/Loader/Loader.vue";
+import Filters from "../../components/Filters/Filters.vue";
 export default {
   name: "Searh",
   data() {
     return {
+      searchText: "",
       titleSerch: "",
       titleImg: "collage.jpg",
       isLoad: true,
@@ -44,27 +54,29 @@ export default {
       () => this.$route.params,
       async (toParams) => {
         try {
-          const query = toParams.query;
-          if (query) {
-            await this.startSearch(query);
+          this.searchText = toParams.query;
+          if (this.searchText) {
+            await this.startSearch(this.searchText);
           }
         } catch (err) {
           console.log(err);
         }
       }
     );
-    const query = this.$route.params.query;
-    if (query) {
+    this.searchText = this.$route.params.query;
+    if (this.searchText) {
       this.isLoad = true;
-      await this.startSearch(query);
+      await this.startSearch(this.searchText);
       this.isLoad = false;
     }
   },
-
   beforeUnmount() {
     this.resetStateSearch();
   },
   computed: {
+    isList() {
+      return !!this.searhResult.length;
+    },
     getUrlImage() {
       return `url(${getPathImage(`mealType/${this.titleImg}`)})`;
     },
@@ -84,6 +96,11 @@ export default {
       "searchByQuery",
       "resetStateSearch",
     ]),
+    async onStartSearch(query) {
+      const querySearch = `${this.searchText}&${query}`;
+      console.log(querySearch);
+      await this.startSearch(querySearch);
+    },
     async startSearch(query) {
       console.log("startSearch", query);
       await this.searchByQuery(query);
@@ -91,11 +108,11 @@ export default {
       if (!this.isRecipesFound) {
         this.titleSerch = `Not found for your request: ${query}`;
       } else {
-        this.titleSerch = query;
+        this.titleSerch = this.searchText;
       }
     },
   },
-  components: { RecipesList, Loader },
+  components: { RecipesList, Loader, Filters },
 };
 </script>
 
