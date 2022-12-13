@@ -31,14 +31,16 @@
 <script>
 export default {
   name: "Ingredients",
-  props: ["extendedIngredients"],
-  data: function () {
+  props: {
+    extendedIngredients: {
+      type: Array,
+    },
+  },
+  data() {
     return {
       ingredients: this.extendedIngredients,
     };
   },
-  methods: {},
-  computed: {},
   watch: {
     extendedIngredients(newValue) {
       const tempIngredients = newValue.map((el) => {
@@ -51,5 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/style/colors.scss";
 @import "./scss/Ingredients.scss";
 </style>

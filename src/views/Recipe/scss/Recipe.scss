@@ -1,26 +1,26 @@
 .recipe {
-    max-width: 1200px;
-    margin: 0 auto;
-    .block:nth-child(1) {
-      width: 40%;
-      border-right: 1px solid $subtext;
+  max-width: 1200px;
+  margin: 0 auto;
+  .block:nth-child(1) {
+    width: 40%;
+    border-right: 1px solid $subtext;
+  }
+  .block:nth-child(2) {
+    width: 50%;
+  }
+
+  .titleDescription {
+    margin: 20px 0;
+    .title {
+      text-decoration: underline;
     }
-    .block:nth-child(2) {
-      width: 50%;
+    img {
+      margin-right: 15px;
     }
-  
-    .titleDescription {
-      margin: 20px 0;
-      .title {
-        text-decoration: underline;
-      }
-      img {
-        margin-right: 15px;
-      }
-    }
-  
-    .itemTile {
-      width: 200px;
-      height: 200px;
-    }
+  }
+
+  .itemTile {
+    width: 200px;
+    height: 200px;
+  }
 }

@@ -26,8 +26,12 @@
 <script>
 export default {
   name: "Nutritional",
-  props: ["nutritionalList"],
-  data: function () {
+  props: {
+    nutritionalList: {
+      type: Array,
+    },
+  },
+  data() {
     return {
       nutritionalInfo: {},
     };
@@ -40,7 +44,6 @@ export default {
           carbs: newValue.carbs,
           fat: newValue.fat,
           protein: newValue.protein,
-          // fat: newValue.bad[2].amount,
           sugar: newValue.bad[4].amount,
           cholesterol: newValue.bad[5].amount,
         };

@@ -1,39 +1,37 @@
 .slider {
+  width: 100%;
+  position: relative;
+  .sliderItems {
     width: 100%;
     position: relative;
-    .sliderItems {
-      width: 100%;
-      position: relative;
+  }
+
+  .arrows {
+    width: 96%;
+    margin: 0 20px;
+    position: absolute;
+    bottom: calc(50% - 20px);
+    div {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      cursor: pointer;
     }
-  
-    .arrows {
-      width: 96%;
-      margin: 0 20px;
-      position: absolute;
-      bottom: calc(50% - 20px);
-      div {
-        width: 40px;
-        height: 40px;
-        background-color: rgba(0,0,0,0.5);
-        border-radius: 5px;
-        cursor: pointer;
-  
-      }
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    .arrowLeft {
       img {
-        width: 30px;
-        height: 30px;
+        transform: rotate(-90deg);
       }
-      .arrowLeft {
-        img {
-          transform: rotate(-90deg);
-        }
+    }
+
+    .arrowRight {
+      img {
+        transform: rotate(90deg);
       }
-     
-      .arrowRight  {
-        img {
-          transform: rotate(90deg);
-        }
-      }
-  
     }
   }
+}

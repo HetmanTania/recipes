@@ -21,11 +21,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      isShow: false,
-    };
-  },
   props: {
     title: {
       type: String,
@@ -35,6 +30,11 @@ export default {
       type: Array,
       requered: true,
     },
+  },
+  data() {
+    return {
+      isShow: false,
+    };
   },
   methods: {
     onSelectFilter(e) {
@@ -55,5 +55,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

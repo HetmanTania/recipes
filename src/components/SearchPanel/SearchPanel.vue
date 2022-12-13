@@ -36,15 +36,12 @@ export default {
     startSearch() {
       this.$router.push({ name: "search", params: { query: this.query } });
       this.closeSerch();
-      // this.searchByQuery(this.query);
     },
-  },
-  created() {
-    console.log("created search");
   },
 };
 </script>
 
 <style lang="scss" scoped>
+@import "@/style/colors.scss";
 @import "./scss/search.scss";
 </style>
