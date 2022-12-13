@@ -9,10 +9,13 @@ import { mapActions, mapState } from "vuex";
 import RecipesList from "../../views/RecipesList/RecipesList.vue";
 export default {
   name: "similarRecipes",
-  props: ["idSimilarRecipes"],
   async created() {
     await this.similarRecipesRequest(this.idSimilarRecipes);
-    console.log("similarRecipes", this.similarRecipes);
+  },
+  props: {
+    idSimilarRecipes: {
+      type: Number,
+    },
   },
   methods: {
     ...mapActions({

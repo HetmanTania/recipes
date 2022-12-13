@@ -17,7 +17,11 @@ import { getPathImage } from "../../../utils";
 
 export default {
   name: "MaelTitle",
-  props: ["meal"],
+  props: {
+    meal: {
+      type: Object,
+    },
+  },
   computed: {
     getUrlImage() {
       return `url(${getPathImage(`mealType/${this.meal.image}`)})`;

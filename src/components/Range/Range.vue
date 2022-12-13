@@ -15,20 +15,10 @@
 
 <script>
 export default {
-  data() {
-    return {
-      valueRange: 0,
-    };
-  },
   created() {
     if (this.min) {
       this.valueRange = this.min;
     }
-  },
-  methods: {
-    setValue() {
-      this.$emit("setRange", this.valueRange);
-    },
   },
   props: {
     title: {
@@ -46,6 +36,16 @@ export default {
     units: {
       type: String,
       default: "Min",
+    },
+  },
+  data() {
+    return {
+      valueRange: 0,
+    };
+  },
+  methods: {
+    setValue() {
+      this.$emit("setRange", this.valueRange);
     },
   },
 };

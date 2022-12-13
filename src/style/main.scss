@@ -25,7 +25,6 @@ body {
   background-image: url('./assets/icon/eye.svg');
 }
 
-
 .img {
   width: 100%;
   height: 100%;
@@ -38,6 +37,7 @@ input {
   position: absolute;
   z-index: -1;
   opacity: 0;
+
   &:checked+label {
     background-image: url("https://img.icons8.com/external-becris-lineal-becris/24/000000/external-check-mintab-for-ios-becris-lineal-becris-1.png");
     background-size: 16px;
@@ -55,6 +55,7 @@ label {
   background-color: transparent;
   border: 1px solid $subtext;
   border-radius: 10px;
+
   &:hover {
     border: 1px solid $secondary-text;
     cursor: pointer;
@@ -70,6 +71,7 @@ label {
   width: 100%;
   padding: 30px;
   border-bottom: 1px solid $subtext;
+
   .main-img {
     width: 100%;
     height: 380px;
@@ -86,6 +88,7 @@ label {
     .bg-green {
       position: absolute;
     }
+
     a:first-child {
       height: 100%;
       margin-top: 0;
@@ -93,10 +96,11 @@ label {
 
     .img-box {
       width: 100%;
+
       .img {
         width: 100%;
       }
-  
+
     }
 
     h4 {
@@ -105,8 +109,9 @@ label {
       bottom: 40px;
       color: $white;
     }
+
     h4::first-letter {
-      text-transform:capitalize;
+      text-transform: capitalize;
     }
 
     &:hover {
@@ -123,10 +128,11 @@ label {
 }
 
 .itemTile {
-  width:  30%;
+  width: 30%;
   margin: 10px;
   border-radius: 20px !important;
   transition: .4s;
+
   h4 {
     margin-top: 15px;
     text-align: center;
@@ -137,7 +143,9 @@ label {
       text-decoration: underline;
     }
   }
-  .bg-green, .img {
+
+  .bg-green,
+  .img {
     width: 100%;
     height: 100%;
 
@@ -151,15 +159,15 @@ label {
     overflow: hidden;
 
     &:hover {
-      .img{
+      .img {
         transform: scale(1.2);
         transition: .4s;
       }
     }
+
     .img {
       transition: .4s;
     }
-
 
     .gray-bg {
       width: 100%;
@@ -167,6 +175,7 @@ label {
       position: absolute;
       top: 0;
       transition: .4s;
+
       .svg {
         opacity: 0;
         margin: 0 auto;
@@ -174,7 +183,7 @@ label {
         top: calc(50% - 27px);
         transition: .4s;
       }
-      
+
       &:hover {
         background-color: $transparentGray2;
         transition: .4s;
@@ -190,23 +199,26 @@ label {
 
   .itemTile-info {
     width: 100%;
+
     .is-4 {
       font-size: 28px;
       height: 63px;
       overflow: hidden;
     }
 
-    .is-5 {      
+    .is-5 {
       margin-top: 15px;
       margin-bottom: 0;
       color: $secondary-text;
       font-size: 16px;
-      text-transform:capitalize;
+      text-transform: capitalize;
       text-align: center;
     }
+
     .miniInfoRecipe {
       width: 100%;
       font-size: 15px;
+
       img {
         width: 36px;
       }
@@ -229,15 +241,12 @@ label {
     left: 5%;
     color: $white;
     font-size: 13px;
+
     i {
       margin-right: 5px;
     }
   }
 }
-
-
-
-
 
 .widget {
   width: 100%;
@@ -245,10 +254,12 @@ label {
   background-color: $pink;
   font-size: 20px;
   border-radius: 10px;
+
   .title-widget {
     border-bottom: 1px dashed $subtext;
     padding-bottom: 20px;
     margin-bottom: 20px;
+
     img {
       margin-right: 15px;
     }
@@ -258,18 +269,20 @@ label {
 .features-couisine-clock {
   margin: 20px 0;
   padding: 10px 0;
-  color: rgba(0,0,0,0.4);
+  color: rgba(0, 0, 0, 0.4);
   font-weight: 400;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
-  border-top: 1px solid rgba(0,0,0,0.1);;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  ;
 }
 
 .features-block {
-  
   width: 100%;
+
   div {
     margin-right: 10px;
   }
+
   img {
     margin: 0 2px;
   }
@@ -289,10 +302,6 @@ input[type=range] {
   z-index: 1;
 }
 
-@media (max-width: 1024px) {
-
-}
-
 @media (max-width: 1070px) {
   .recipe .block:nth-child(1) {
     width: 50%;
@@ -308,10 +317,9 @@ input[type=range] {
 }
 
 @media (max-width: 670px) {
-  .randomRecipes  {
+  .randomRecipes {
     .itemTile {
       width: 80%;
     }
   }
 }
-

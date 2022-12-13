@@ -36,7 +36,7 @@ import MiniInfoRecipe from "../../MiniInfoRecipe/MiniInfoRecipe.vue";
 import { getMiniDescription } from "../../../utils.js";
 export default {
   name: "Tile",
-  data: function () {
+  data() {
     return {
       theRecipe: {},
     };

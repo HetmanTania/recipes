@@ -28,16 +28,15 @@
 
 <script>
 import { getNumberFromPxl, toFixed } from "../../utils";
-
 export default {
+  mounted() {
+    this.resize();
+  },
   data() {
     return {
       widthSliderItem: 0,
       windowInnerWidth: 0,
     };
-  },
-  mounted() {
-    this.resize();
   },
   methods: {
     resize(innerWidth) {

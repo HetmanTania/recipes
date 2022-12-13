@@ -41,14 +41,6 @@ import Loader from "../../components/Loader/Loader.vue";
 import Filters from "../../components/Filters/Filters.vue";
 export default {
   name: "Searh",
-  data() {
-    return {
-      searchText: "",
-      titleSerch: "",
-      titleImg: "collage.jpg",
-      isLoad: true,
-    };
-  },
   async created() {
     this.$watch(
       () => this.$route.params,
@@ -72,6 +64,14 @@ export default {
   },
   beforeUnmount() {
     this.resetStateSearch();
+  },
+  data() {
+    return {
+      searchText: "",
+      titleSerch: "",
+      titleImg: "collage.jpg",
+      isLoad: true,
+    };
   },
   computed: {
     isList() {

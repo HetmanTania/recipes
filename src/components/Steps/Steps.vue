@@ -21,9 +21,14 @@ import StepDone from "../StepDone/StepDone.vue";
 
 export default {
   name: "Steps",
-  props: ["id"],
   async created() {
     await this.stepsRequest(this.id);
+  },
+  props: {
+    id: {
+      type: Number,
+      requered: true,
+    },
   },
   computed: mapState("step", ["stepsRecipe"]),
   methods: {
