@@ -15,7 +15,7 @@
 
 <script>
 import { mapState } from "vuex";
-import mealTypesObj from "../../constants.js";
+import { MEALTYPES } from "../../constants.js";
 import MealTile from "@/components/Tiles/MealTile/MealTile.vue";
 import Slider from "@/components/Slider/Slider.vue";
 import RandomRecipes from "../RandomRecipes/RandomRecipes.vue";
@@ -23,7 +23,7 @@ import RandomRecipes from "../RandomRecipes/RandomRecipes.vue";
 export default {
   data() {
     return {
-      mealTypes: mealTypesObj,
+      mealTypes: MEALTYPES,
     };
   },
   computed: {

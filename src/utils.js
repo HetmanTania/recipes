@@ -3,7 +3,7 @@ const API_KEY = "5e3b32cfcce1458a8ea0cb13effdad13"; ///52f1014614c940d28129c16f7
 
 export function urlGenerate(path, query) {
   if (query) {
-    return `${MAIN_URL}${path}?apiKey=${API_KEY}&${query}`;
+    return `${MAIN_URL}${path}?${query}&apiKey=${API_KEY}`;
   }
   return `${MAIN_URL}${path}?apiKey=${API_KEY}`;
 }

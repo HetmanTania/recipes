@@ -22,7 +22,7 @@
           {{ theRecipe.title }}
         </h4>
       </router-link>
-      <h5 class="desc" v-html="getDescription"></h5>
+      <h5 v-if="isHasDescription" class="desc" v-html="getDescription"></h5>
       <mini-info-recipe
         :servings="theRecipe.servings"
         :readyInMinutes="theRecipe.readyInMinutes"
@@ -47,6 +47,9 @@ export default {
     },
   },
   computed: {
+    isHasDescription() {
+      return !!this.theRecipe.summary;
+    },
     getDescription() {
       return getMiniDescription(this.theRecipe.summary);
     },

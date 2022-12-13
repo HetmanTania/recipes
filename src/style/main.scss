@@ -275,6 +275,19 @@ label {
   }
 }
 
+.button {
+  .svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+
+input[type=range] {
+  position: relative;
+  opacity: 1;
+  z-index: 1;
+}
 
 @media (max-width: 1024px) {
 
@@ -301,5 +314,4 @@ label {
     }
   }
 }
-
 

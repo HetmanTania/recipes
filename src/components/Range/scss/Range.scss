@@ -1,0 +1,25 @@
+$background-range: #eeeeee;
+$slider-thumb:  #8CB369;
+.title {
+    margin-bottom: 10px !important;
+}
+
+.range-slider {
+    height: 16px;
+    appearance: none;
+    background: $background-range;
+    border-radius: 10px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: $slider-thumb;
+        cursor: pointer;
+        transition: background .15s ease-in-out;
+    }
+}
